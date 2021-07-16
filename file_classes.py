@@ -14,6 +14,9 @@ from scipy.stats import skew, kurtosis, chi2, linregress
 from scipy.optimize import minimize
 from numpy import linalg as LA
 
+import os
+os.chdir('D:\Ricardo\Documents\Docs\Finanzas Cuantitativas FC\codigos_clase_2021-2')
+
 # import our own files and reload
 import file_classes
 importlib.reload(file_classes)
@@ -608,4 +611,4 @@ class montecarlo_item():
         dm.compute() # compute returns and all different risk metrics
         dm.plot_histogram() # plot histogram
         print(dm) # write all data in console
-        
+                

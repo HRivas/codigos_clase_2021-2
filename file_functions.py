@@ -13,6 +13,9 @@ import importlib
 import matplotlib.pyplot as plt
 from scipy.stats import skew, kurtosis, chi2
 
+import os
+os.chdir('D:\Ricardo\Documents\Docs\Finanzas Cuantitativas FC\codigos_clase_2021-2')
+
 # import our own files and reload
 import file_classes
 importlib.reload(file_classes)
@@ -22,7 +25,7 @@ importlib.reload(file_functions)
 
 def load_timeseries(ric):
     
-    directory = 'C:\\Users\Meva\\.spyder-py3\\data\\2021-2\\' # hardcoded
+    directory = '..\\data-2021-2\\' # hardcoded
     path = directory + ric + '.csv' 
     raw_data = pd.read_csv(path)
     t = pd.DataFrame()
